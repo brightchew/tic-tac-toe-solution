@@ -10,16 +10,25 @@ function playerMove (ev) {
     ev.target.textContent = 'x'
     var i = ev.target.id
     gridArray[i] = 'x'
+    checkWinner()
 
     currentPlayer = 'o'
   } else if (ev.target.textContent === '' && currentPlayer === 'o') {
     ev.target.textContent = 'o'
     var i = ev.target.id
     gridArray[i] = 'o'
+    checkWinner()
 
     currentPlayer = 'x'
   }
-  console.log(gridArray);
+}
+
+function checkWinner() {
+  if        (gridArray[0] === gridArray[1] && gridArray[1] === gridArray[2]) {
+    var winner = gridArray[0]
+    console.log('winner is: ' + winner)
+  }
+
 }
 
 // DOM manipulation
