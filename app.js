@@ -6,15 +6,20 @@ gridArray = [ 0, 0, 0,
 var currentPlayer = 'x'
 
 function playerMove (ev) {
-  if (currentPlayer === 'x') {
+  if (ev.target.textContent === '' && currentPlayer === 'x') {
     ev.target.textContent = 'x'
+    var i = ev.target.id
+    gridArray[i] = 'x'
 
     currentPlayer = 'o'
-  } else if (currentPlayer === 'o') {
+  } else if (ev.target.textContent === '' && currentPlayer === 'o') {
     ev.target.textContent = 'o'
+    var i = ev.target.id
+    gridArray[i] = 'o'
 
     currentPlayer = 'x'
   }
+  console.log(gridArray);
 }
 
 // DOM manipulation
