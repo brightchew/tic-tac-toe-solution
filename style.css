@@ -1,0 +1,23 @@
+body {
+  font-family: Futura;
+  font-size: 3em;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  l
+}
+
+.grid {
+  height: 100px;
+  width: 100px;
+  background: gold;
+  border: 10px solid white;
+  display: inline-block;
+  vertical-align: top
+}
+
+#messageBody {
+  height: 100px;
+  width: 300px;
+  background: rgb(221, 112, 20)
+}
