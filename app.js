@@ -1,4 +1,4 @@
-gridArray =  [0, 0, 0,
+gridArray = [ 0, 0, 0,
               0, 0, 0,
               0, 0, 0]
 
@@ -6,7 +6,15 @@ gridArray =  [0, 0, 0,
 var currentPlayer = 'x'
 
 function playerMove (ev) {
-  ev.target.textContent = 'x'
+  if (currentPlayer === 'x') {
+    ev.target.textContent = 'x'
+
+    currentPlayer = 'o'
+  } else if (currentPlayer === 'o') {
+    ev.target.textContent = 'o'
+
+    currentPlayer = 'x'
+  }
 }
 
 // DOM manipulation
